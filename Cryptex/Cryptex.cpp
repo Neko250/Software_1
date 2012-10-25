@@ -3,7 +3,7 @@
        ||                                      ||
        ||          Programa creado por:        ||
        ||      Carlos Aguilar de la Morena     ||
-       ||          Pablo Sabín Cazorla         ||
+       ||          Pablo Sabin Cazorla         ||
        ||           El  10 / 10 / 2012         ||
        ||                                      ||
        ==========================================
