@@ -24,7 +24,7 @@ int main()
 	cout << "Introduce el password para comenzar: ";
 	cin >> pass;
 
-	while((pass != ("mushroom")) && (pass != ("Longchicken2x1")))
+	while((pass != ("mushroom")) && (pass != ("1123581321")))
 	{
 		intentos -= 1;
 		if(intentos == 0)
@@ -38,7 +38,7 @@ int main()
 		cin >> pass;
 	}
 
-	if(pass == "Longchicken2x1")
+	if(pass == "1123581321")
 	{
 		cout << endl << "Password Correcto. Acceso Concedido\n"
 			 << "\n\tBienvenido, Carlos, a Cryptex\n\n";
