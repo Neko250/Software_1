@@ -21,7 +21,7 @@ int main()
 
 	//Seleccion de Turno
 	srand(time(NULL));
-	if((int(rand()) % 2) == 0)
+	if((rand() % 2) == 0)
 	{
 		turn = 1;
 	}
@@ -82,17 +82,17 @@ int main()
 			//Seleccion de movimiento
 			if(obj >= 3)
 			{
-				if((int(rand()) % 3) == 0)
+				if((rand() % 3) == 0)
 				{
 					cout << "La maquina retira 1 objeto.\n";
 					obj -= 1;
 				}
-				else if((int(rand()) % 3) == 1)
+				else if((rand() % 3) == 1)
 				{
 					cout << "La maquina retira 2 objetos.\n";
 					obj -= 2;
 				}
-				else if((int(rand()) % 3) == 2)
+				else if((rand() % 3) == 2)
 				{
 					cout << "La maquina retira 3 objetos.\n";
 					obj -= 3;
@@ -100,12 +100,12 @@ int main()
 			}
 			else if(obj == 2)
 			{
-				if((int(rand()) % 2) == 0)
+				if((rand() % 2) == 0)
 				{
 					cout << "La maquina retira 1 objeto.\n";
 					obj -= 1;
 				}
-				else if((int(rand()) % 2) == 1)
+				else if((rand() % 2) == 1)
 				{
 					cout << "La maquina retira 2 objetos.\n";
 					obj -= 2;
