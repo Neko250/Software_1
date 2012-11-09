@@ -24,7 +24,7 @@ goto start
  
 :compile
 cls
-g++ Guess.cpp -o Guess.exe
+g++ work.cpp -o RenameMe.exe
 echo Compilation Done !
 echo.
 pause
@@ -33,7 +33,7 @@ goto start
 
 :icon
 cls
-RCEDIT.exe /I Guess.exe quest.ico
+RCEDIT.exe /I RenameMe.exe cpp.ico
 echo Icon Injected !
 echo.
 pause
