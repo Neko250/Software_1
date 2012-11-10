@@ -82,17 +82,19 @@ int main()
 			//Seleccion de movimiento
 			if(obj >= 3)
 			{
-				if((rand() % 3) == 0)
+				move = (rand() % 3);
+				
+				if(move == 0)
 				{
 					cout << "La maquina retira 1 objeto.\n";
 					obj -= 1;
 				}
-				else if((rand() % 3) == 1)
+				else if(move == 1)
 				{
 					cout << "La maquina retira 2 objetos.\n";
 					obj -= 2;
 				}
-				else if((rand() % 3) == 2)
+				else
 				{
 					cout << "La maquina retira 3 objetos.\n";
 					obj -= 3;
@@ -100,12 +102,14 @@ int main()
 			}
 			else if(obj == 2)
 			{
-				if((rand() % 2) == 0)
+				move = (rand() % 2);
+				
+				if(move == 0)
 				{
 					cout << "La maquina retira 1 objeto.\n";
 					obj -= 1;
 				}
-				else if((rand() % 2) == 1)
+				else
 				{
 					cout << "La maquina retira 2 objetos.\n";
 					obj -= 2;
