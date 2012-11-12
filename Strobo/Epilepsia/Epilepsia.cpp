@@ -1,4 +1,3 @@
-
 // Coded by Carlos Aguilar de la Morena
 
 #include <iostream>
@@ -15,7 +14,7 @@ int main()
 	int num(1), freq;
 
 	welcome(freq);
-	while(1 > 0)
+	while(true)
 	{
 		strobo(num, freq);
 	}
