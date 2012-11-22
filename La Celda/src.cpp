@@ -57,7 +57,7 @@ int main()
 			
 			if(ans)
 			{
-				cout << ""
+				cout << "";
 			}
 			else
 			{
@@ -66,7 +66,7 @@ int main()
 		}
 		else
 		{
-			cout << "\n"
+			cout << "\n";
 		}
 	}
 	else
@@ -96,7 +96,7 @@ int main()
 			if(ans)
 			{
 				cout << "\nDejas atras tu miedo y sigues andando por aquel oscuro y humedo pasillo.\n"
-					 << "Llegas a lo que parece una habitacion de un palacio, pero todo esta\,"
+					 << "Llegas a lo que parece una habitacion de un palacio, pero todo esta\n"
 					 << "destrozado: muebles, lamparas, las paredes... Todo esta en condiciones\n"
 					 << "lamentables. Todo a excepcion de un piano de cola que hay en medio\n"
 					 << "de la estancia. Te acercas a examinarlo. Pero te quedas paralizado\n"
@@ -174,7 +174,7 @@ int main()
 				 << "Bajas por las escaleras => 0\n"
 				 << "Intentas abrir la puerta => 1\n\n"
 				 << "===> ";
-			cin >> ans
+			cin >> ans;
 			
 			while(ans)
 			{
