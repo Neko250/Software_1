@@ -26,6 +26,7 @@ using namespace std;
 
 char simon_says();
 void simon_color(char);
+void welcome();
 
 int main()
 {
@@ -33,8 +34,10 @@ int main()
 	char simon[200], player;
 
 	system("color 0A");
+	
+	welcome();
 
-	cout << "\n\tSimon Says !\n"
+	cout << "\n\n\t\tSimon Says !\n"
 		 << "\n============\n\n"
 		 << "Rules:\n"
 		 << "Simon will pick a random color each turn.\n"
@@ -116,6 +119,8 @@ int main()
 }
 
 //==========================================================
+//
+//	Says a random color
 
 char simon_says()
 {
@@ -140,6 +145,10 @@ char simon_says()
 	}
 }
 
+//==========================================================
+//
+//	Paints Screen
+
 void simon_color(char color)
 {
 	if(color == 'R')
@@ -155,4 +164,61 @@ void simon_color(char color)
 	{
 		system("color 60");
 	}
+}
+
+//==========================================================
+//
+//	Welcome
+
+void welcome()
+{
+	system("cls");
+	cout << endl
+		 << "\t _ _ _\n"
+		 << "\t| | | |\n"
+		 << "\t| | | |\n"
+		 << "\t|_____|";
+	Sleep(500);
+	system("cls");
+	cout << endl
+		 << "\t _ _ _\n"
+		 << "\t| | | |___\n"
+		 << "\t| | | | -_|\n"
+		 << "\t|_____|___|";
+	Sleep(500);
+	system("cls");
+	cout << endl
+		 << "\t _ _ _     _\n"
+		 << "\t| | | |___| |\n"
+		 << "\t| | | | -_| |\n"
+		 << "\t|_____|___|_|";
+	Sleep(500);
+	system("cls");
+	cout << endl
+		 << "\t _ _ _     _\n"
+		 << "\t| | | |___| |___\n"
+		 << "\t| | | | -_| |  _|\n"
+		 << "\t|_____|___|_|___|";
+	Sleep(500);
+	system("cls");
+	cout << endl
+		 << "\t _ _ _     _\n"
+		 << "\t| | | |___| |___ ___\n"
+		 << "\t| | | | -_| |  _| . |\n"
+		 << "\t|_____|___|_|___|___|";
+	Sleep(500);
+	system("cls");
+	cout << endl
+		 << "\t _ _ _     _\n"
+		 << "\t| | | |___| |___ ___ _____\n"
+		 << "\t| | | | -_| |  _| . |     |\n"
+		 << "\t|_____|___|_|___|___|_|_|_|";
+	Sleep(500);
+	system("cls");
+	cout << endl
+		 << "\t _ _ _     _\n"
+		 << "\t| | | |___| |___ ___ _____ ___\n"
+		 << "\t| | | | -_| |  _| . |     | -_|\n"
+		 << "\t|_____|___|_|___|___|_|_|_|___|";
+	Sleep(2000);
 }
