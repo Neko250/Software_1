@@ -1,11 +1,16 @@
-#include <iostream>
-#include <stdlib.h>
-#include <windows.h>
-#include <fstream>
-#include <ctime>
-#include <math.h>
-#include <iomanip>
+#include "header.h"
 using namespace std;
+
+//=======================================================
+//
+//	Da un numero aleatorio entre [0, num - 1]
+
+int random(int num)
+{
+	srand(time(NULL));
+	
+	return (rand() % num);
+}
 
 //=======================================================
 //
@@ -74,7 +79,7 @@ double fact(double X)
 {
 	double ans = 1;
 	
-	for(int i = 1; i <= X, i++)
+	for(int i = 1; i <= X; i++)
 	{
 		ans *= i;
 	}
@@ -90,7 +95,7 @@ unsigned digits(unsigned N)
 {
 	unsigned digits(1);
 
-	for(unsigned mod = 10; (N % mod) != 0; mod *= 10)
+	for(unsigned mod = 10; (N / mod) != 0; mod *= 10)
 	{
 		digits++;
 	}
@@ -117,7 +122,7 @@ unsigned pos_calc(unsigned N, unsigned i)
 bool prime(unsigned N)
 {
 	bool prime = true;
-	for(unsigned divisor = 2; divisor <= sqrt(N); divisor++)
+	for(unsigned divisor = 2; divisor < N; divisor++)
 	{
 		if(N % divisor == 0)
 		{
