@@ -48,7 +48,7 @@ void getKey(bool& close)
 		{
 			welcome();
 			
-			cout << "\tKey Code: 27\n";
+			cout << "\t\t\tKey Code: 27\n";
 			run = false;
 			close = true;
 		}
@@ -59,7 +59,7 @@ void getKey(bool& close)
 			{
 				welcome();
 				
-				cout << "\tKey Code: " << i << endl;
+				cout << "\t\t\tKey Code: " << i << endl;
 				run = false;
 			}
 		}
