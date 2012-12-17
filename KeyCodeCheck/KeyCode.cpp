@@ -23,6 +23,8 @@ int main()
 	return 0;
 }
 
+//------------------------------
+
 void welcome()
 {
 	system("cls");
