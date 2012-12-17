@@ -10,6 +10,8 @@ int main()
 {
 	bool close = false;
 	
+	system("mode con: lines=11 cols=64");
+	
 	welcome();
 	
 	while(!close)
@@ -17,14 +19,13 @@ int main()
 		getKey(close);
 	}
 	
-	cout << "\n\t";
-	system("pause");
+	Sleep(1000);
 	return 0;
 }
 
 void welcome()
 {
-	//	system("mode con: lines=25 cols=80");
+	system("cls");
 	
 	cout << "\n"
 		 << "\t _____ _     _           _    _____\n"
@@ -45,6 +46,9 @@ void getKey(bool& close)
 	{
 		if(GetAsyncKeyState(0x1B))
 		{
+			welcome();
+			
+			cout << "\tKey Code: 27\n";
 			run = false;
 			close = true;
 		}
@@ -53,7 +57,10 @@ void getKey(bool& close)
 		{
 			if(GetAsyncKeyState(i))
 			{
+				welcome();
+				
 				cout << "\tKey Code: " << i << endl;
+				run = false;
 			}
 		}
 		
