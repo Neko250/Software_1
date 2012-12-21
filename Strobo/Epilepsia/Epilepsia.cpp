@@ -6,32 +6,76 @@
 #include <ctime>
 using namespace std;
 
-void welcome(int&);
+#define VK_Esc 27
+#define VK_Space 32
+#define VK_M 77
+#define VK_I 73
+#define VK_O 79
+
+void welcome(int&, bool&);
 void strobo(int&, int);
+void getKey(bool&, bool&, bool&, bool&);
+void clearBufer();
 
 int main()
 {
 	int num(1), freq;
-
-	welcome(freq);
-	while(true)
+	
+	bool menu = true, run1 = true, run2 = false, quit = false;
+	
+	system("mode con: lines=50 cols=150");
+	
+	while(!quit)
 	{
-		strobo(num, freq);
+		if(menu)
+		{
+			welcome(freq, menu);
+		}
+		
+		run1 = true;
+		
+		while(run1)
+		{
+			system("color 07");
+			
+			getKey(menu, run1, run2, quit);
+		}
+		
+		while(run2)
+		{
+			strobo(num, freq);
+			getKey(menu, run1, run2, quit);
+		}
 	}
+	
 	return 0;
 }
 
 //=======================================================
 
-void welcome(int& freq)
+void welcome(int& freq, bool& menu)
 {
-	cout << "\n\tWelcome\n"
-		 << "\tPress \"Ctrl+C\" to exit.\n"
-		 << "=======================================\n\n"
-		 << "Type in the stroboscopic light frequency in milliseconds: ";
+	system("cls");
+	system("color 07");
+	
+	clearBufer();
+	
+	for(int i = 0; i < 20; i++)
+	{
+		cout << endl;
+	}
+	
+	cout << "\t\t\t\t\t\t              Welcome\n\n"
+		 << "\t\t\t\t\t\t         Press \"Esc\" to exit.\n"
+		 << "\t\t\t\t\t\t         Press \"M\" for menu.\n"
+		 << "\t\t\t\t\t\t         Press \"I\" for ON\n"
+		 << "\t\t\t\t\t\t         Press \"O\" for OFF\n\n"
+		 << "\t\t\t\t\t\t=======================================\n\n"
+		 << "\t\t\t\t\t\t      Frequency in milliseconds: ";
 	cin >> freq;
-	cout << "\n=======================================\n\n";
-	system("pause");
+	
+	menu = false;
+	
 	system("cls");
 }
 
@@ -56,4 +100,46 @@ void strobo(int& num, int freq)
 			break;
 	}
 
+}
+
+//=======================================================
+
+void getKey(bool& menu, bool& run1, bool& run2, bool& quit)
+{
+	if(GetAsyncKeyState(VK_Esc))
+	{
+		run1 = false;
+		run2 = false;
+		menu = false;
+		quit = true;
+	}
+	
+	if(GetAsyncKeyState(VK_I))
+	{
+		run1 = false;
+		run2 = true;
+		menu = false;
+	}
+	
+	if(GetAsyncKeyState(VK_O))
+	{
+		run1 = true;
+		run2 = false;
+		menu = false;
+	}
+	
+	if(GetAsyncKeyState(VK_M))
+	{
+		run1 = false;
+		run2 = false;
+		menu = true;
+	}
+}
+
+//=======================================================
+
+void clearBufer()
+{
+	HANDLE hConsole = GetStdHandle(STD_INPUT_HANDLE);
+	FlushConsoleInputBuffer(hConsole);
 }
