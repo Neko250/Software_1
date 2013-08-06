@@ -259,7 +259,7 @@ void ayuda()
 		 << "\tAplicaciones ---> n^r\n"
 		 << "\tInyectiva ------> n(n-1)(n-2)...(n-r+1)\n"
 		 << "\tBiyectiva ------> n!\n"
-		 << "\tSobreyectiva ---> n! · S(r, n)\n\n\t";
+		 << "\tSobreyectiva ---> n! * S(r, n)\n\n\t";
 	
 	system("pause");
 }
