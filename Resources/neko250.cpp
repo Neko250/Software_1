@@ -268,6 +268,83 @@ void welcome()
 
 //========================================================
 //
+//	Convierte de entero a string
+
+string int2string(int num) {
+	int dig = digits(num) - 1;
+	string ans = "";
+	ans += char( (num / pow(10, dig)) + 48 );
+	num %= int(pow(10, dig));
+	dig--;
+	
+	for( ; dig >= 0; dig--) {
+		ans += char( (num / pow(10, dig)) + 48 );
+		num %= int(pow(10, dig));
+	}
+	
+	return ans;
+}
+
+//========================================================
+//
+//	Convierte de string a entero
+
+int string2int(string num) {
+	int ans = 0;
+	
+	for(int i = num.size() - 1; i >= 0; i--) {
+		ans += int( (num[i] - 48) * pow(10, i) );
+	}
+	
+	return ans;
+}
+
+//========================================================
+//
+//	Pausa el flujo de ejecucion del programa
+
+void pause() {
+	system("pause");
+}
+
+//========================================================
+//
+//	Redimensiona la ventana al tamano especificado
+/*
+void setWindowSize(int width, int height) {
+	string message = "mode con: lines=";
+	
+	message += int2string(height);
+	message += " cols=";
+	message += int2string(width);
+	
+	system(message);
+}
+*/
+//========================================================
+//
+//	Borra 'times' elementos con una pausa de 'step' entre char y char
+
+void remove(int times, int step) {
+	for(int i = 0; i < times; i++) {
+		cout << bk << sp << bk;
+		Sleep(step);
+	}
+}
+
+//========================================================
+//
+//	Imprime un texto con pausa de 'step' entre char y char
+
+void print(string text, int step) {
+	for(int i = 0; text[i] != '\0'; i++) {
+		cout << text[i];
+		Sleep(step);
+	}
+}
+
+//========================================================
+//
 //	Limpia el bufer de entrada
 
 void clearBufer()

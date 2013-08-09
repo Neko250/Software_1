@@ -74,6 +74,12 @@ void load_text();
 void set_scrn();
 void welcome();
 
+string int2string(int);
+int string2int(string);
+void pause();
+//void setWindowSize(int, int);
+void remove(int, int);
+void print(string, int);
 void clearBufer();
 void setCursor(int, int);
 void setCursor(COORD);
